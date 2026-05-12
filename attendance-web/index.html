@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Attendance Tracker Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Attendance Tracker Pro</h1>
+        <p class="subtitle">Premium healthcare administration dashboard</p>
+      </header>
+
+      <div class="controls">
+        <select id="monthFilter">
+          <option value="all">Full History</option>
+          <option value="2026-05">May 2026</option>
+          <option value="2026-06">June 2026</option>
+        </select>
+        <button id="refreshBtn">Refresh Data</button>
+      </div>
+
+      <div id="dashboard" class="dashboard-grid">
+        <!-- Cards will be injected here -->
+      </div>
+
+      <div id="reportContainer" class="report-section" style="display: none;">
+        <h2 id="reportTitle">Doctor Report</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="reportTableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
